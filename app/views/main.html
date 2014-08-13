@@ -1,23 +1,60 @@
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
+  <h1>Nut 'n' Ex!</h1>
   <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
+    Hello, welcome to nut 'n' ex, your nutrition and exercise adviser.
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <p>Please enter your basic info</p>
+  <label for="gender_female">Female</label>
+  <input type="radio" name="gender" value="male" id="gender_female" />
+  <label for="gender_male">Male</label>
+  <input type="radio" name="gender" value="male" id="gender_male" />
+  <br />
+  age: <input type="text" /><br />
+  height: <input type="text" /><br />
+  weight: <input type="text" /><br />
+
+  <button>Calculate!</button>
 </div>
 
+<div>
+  body fat %: <input type="text" /><br />
+  <input type="checkbox" checked="checked" id="cardio_training" /><label for="cardio_training">Cardio training included</label><br />
+  <input type="checkbox" checked="checked" id="weight_training" /><label for="weight_training">Weight training included</label><br />
+  average daily time for exercise:
+  <select>
+    <option>
+      1h / week
+    </option>
+    <option>
+      3h / week
+    </option>
+    <option selected="selected">
+      5h / week (Recommended)
+    </option>
+    <option>
+      5h+ / week
+    </option>
+  </select>
+</div>
+<br />
+<slider
+    ng-model="chartObject.data.rows[1].c[1].v"
+    floor="0"
+    ceiling="50"
+    step="0.5"
+    precision="1">
+</slider>
+
+<div google-chart chart="chartObject" style="{{cssStyle}}"></div>
+
 <div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
+  <h4>Nutrition</h4>
   <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+    ...
   </p>
 
-  <h4>Angular</h4>
+  <h4>Exercising</h4>
   <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
+    ...
   </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
 </div>

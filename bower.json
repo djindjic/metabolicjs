@@ -11,11 +11,16 @@
     "angular-sanitize": "1.2.16",
     "angular-animate": "1.2.16",
     "angular-touch": "1.2.16",
-    "angular-route": "1.2.16"
+    "angular-route": "1.2.16",
+    "venturocket-angular-slider": "~0.3.2",
+    "angular-google-chart": "~0.0.10"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
     "angular-scenario": "1.2.16"
   },
-  "appPath": "app"
+  "appPath": "app",
+  "resolutions": {
+    "angular": "~1.2.*"
+  }
 }
