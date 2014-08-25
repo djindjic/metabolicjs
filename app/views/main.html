@@ -1,24 +1,27 @@
 <div class="jumbotron">
-  <h1>Nut 'n' Ex!</h1>
-  <p class="lead">
-    Hello, welcome to nut 'n' ex, your nutrition and exercise adviser.
-  </p>
-  <p>Please enter your basic info</p>
-  <label for="gender_female">Female</label>
-  <input type="radio" name="gender" value="male" id="gender_female" />
-  <label for="gender_male">Male</label>
-  <input type="radio" name="gender" value="male" id="gender_male" />
-  <br />
-  age: <input type="text" /><br />
-  height: <input type="text" /><br />
-  weight: <input type="text" /><br />
-
-  <button>Calculate!</button>
+  <form novalidate class="main-form">
+    <h1>Nut 'n' Ex!</h1>
+    <p class="lead">
+      Hello, welcome to nut 'n' ex, your nutrition and exercise adviser.
+    </p>
+    <p>Please enter your basic info</p>
+    <label for="gender_female">Female</label>
+    <input type="radio"  ng-model="person.gender" name="gender" value="female" id="gender_female" />
+    <label for="gender_male">Male</label>
+    <input type="radio"  ng-model="person.gender" name="gender" value="male" id="gender_male" />
+    <br />
+    age: <input type="number" ng-model="person.age" /><br />
+    height: <input type="number" ng-model="person.height" /><br />
+    weight: <input type="number" ng-model="person.weight" /><br />
+    body mass index: <span>{{person.bmi}}</span><br />
+    body fat %: <input type="number" ng-model="person.bf" />
+    <button ng-click="recalculateBodyFat()">Recalculate</button><br />
+  </form>
 </div>
 
 <div>
-  body fat %: <input type="text" /><br />
-  <input type="checkbox" checked="checked" id="cardio_training" /><label for="cardio_training">Cardio training included</label><br />
+  <input type="checkbox" checked="checked" id="cardio_training" />
+  <label for="cardio_training">Cardio training included</label><br />
   <input type="checkbox" checked="checked" id="weight_training" /><label for="weight_training">Weight training included</label><br />
   average daily time for exercise:
   <select>

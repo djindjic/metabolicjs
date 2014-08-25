@@ -13,7 +13,8 @@
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
     "venturocket-angular-slider": "~0.3.2",
-    "angular-google-chart": "~0.0.10"
+    "angular-google-chart": "~0.0.10",
+    "restangular": "~1.4.0"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",

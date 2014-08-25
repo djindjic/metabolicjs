@@ -8,8 +8,15 @@
  *
  * Main module of the application.
  */
+angular.module('nutnexApp.controllers', []);
+angular.module('nutnexApp.services', []);
+angular.module('nutnexApp.models', []);
+
 angular
   .module('nutnexApp', [
+    'nutnexApp.controllers',
+    'nutnexApp.services',
+    'nutnexApp.models',
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -17,7 +24,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'vr.directives.slider',
-    "googlechart"
+    "googlechart",
+    "restangular"
   ])
   .config(function ($routeProvider) {
     $routeProvider
