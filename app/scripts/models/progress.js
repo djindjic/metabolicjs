@@ -1,3 +1,4 @@
+'use strict';
 
 angular.module('nutnexApp.models')
   .factory('Progress', function () {

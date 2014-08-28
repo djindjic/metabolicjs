@@ -11,12 +11,14 @@
 angular.module('nutnexApp.controllers', []);
 angular.module('nutnexApp.services', []);
 angular.module('nutnexApp.models', []);
+angular.module('nutnexApp.utils', []);
 
 angular
   .module('nutnexApp', [
     'nutnexApp.controllers',
     'nutnexApp.services',
     'nutnexApp.models',
+    'nutnexApp.utils',
     'ngAnimate',
     'ngCookies',
     'ngResource',
