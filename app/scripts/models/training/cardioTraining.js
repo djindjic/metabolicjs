@@ -8,7 +8,12 @@ angular.module('nutnexApp.models')
 		}
 	*/
 	var CardioTraining = function(){
-	
+		var _time;
+
+		Object.defineProperty(this, "time", {
+			get: function() { return _time; },
+			set: function(val) { _time = val; }
+		});
 	};
 
 	CardioTraining.prototype = {
