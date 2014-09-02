@@ -2,8 +2,11 @@
 
 angular.module('nutnexApp.utils')
   .factory('InterfaceUtil', function () {
-    var InterfaceUtil = function (name, methods, properties) {
-        if (arguments.length < 2 && arguments.length > 3) {
+  	// Interface()
+    // An interface constructor
+    // Note: interface is a reserved word in JavaScript and is only used here for demonstration purposes.
+    var InterfaceUtil = function (name, methods) {
+        if (arguments.length != 2) {
             throw new Error("Interface constructor called with " + arguments.length + "arguments, but expected exactly 2.");
         }
         this.name = name;
@@ -13,13 +16,6 @@ angular.module('nutnexApp.utils')
                 throw new Error("Interface constructor expects method names to be " + "passed in as a string.");
             }
             this.methods.push(methods[i]);
-        }
-        this.properties = [];
-        for (var i = 0, len = properties.length; i < len; i++) {
-            if (typeof properties[i] !== 'string') {
-                throw new Error("Interface constructor expects properties names to be " + "passed in as a string.");
-            }
-            this.properties.push(properties[i]);
         }
     };
  
@@ -37,12 +33,6 @@ angular.module('nutnexApp.utils')
                 var method = interfaceObject.methods[j];
                 if (!object[method] || typeof object[method] !== 'function') {
                     throw new Error("Function Interface.ensureImplements: object " + "does not implement the " + interfaceObject.name + " interface. Method " + method + " was not found.");
-                }
-            }
-            for (var z = 0, propertiesLen = interfaceObject.properties.length; z < propertiesLen; z++) {
-                var property = interfaceObject.properties[z];
-                if (!object.hasOwnProperty(property)) {
-                    throw new Error("Function Interface.ensureImplements: object " + "does not implement the " + interfaceObject.name + " interface. Property " + property + " was not found.");
                 }
             }
         }

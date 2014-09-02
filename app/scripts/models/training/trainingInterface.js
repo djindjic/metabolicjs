@@ -2,7 +2,6 @@
 
 angular.module('nutnexApp.models')
   .factory('TrainingInterface', ['InterfaceUtil', function (InterfaceUtil) {
-  	var methods = ["burnEnergy"],
-  	    properties = ["time"];
-	return new InterfaceUtil( "TrainingInterface", methods, properties);
+	return new InterfaceUtil( "TrainingInterface",
+		["burnEnergy"]);
   }]);
