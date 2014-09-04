@@ -26,8 +26,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'vr.directives.slider',
-    "googlechart",
-    "restangular"
+    'googlechart',
+    'restangular'
   ])
   .config(function ($routeProvider) {
     $routeProvider
