@@ -1,4 +1,4 @@
-export class CalculationFactory {
+export class Calculator {
 	constructor() {
 
   }
