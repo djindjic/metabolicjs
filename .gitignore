@@ -1,6 +1,3 @@
 node_modules
-.tmp
-.sass-cache
-bower_components
-dist-to5
-dist-traceur
+dist
+jspm_modules

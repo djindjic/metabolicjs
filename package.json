@@ -6,6 +6,10 @@
     "gulp-load-plugins": "^0.7.0",
     "gulp-util": "^3.0.1",
     "gulp-webserver": "^0.8.4",
+    "jspm": "^0.8.1",
     "promise": "^6.0.1"
+  },
+  "jspm": {
+    "name": "metabolicjs"
   }
 }

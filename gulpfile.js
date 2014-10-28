@@ -21,20 +21,20 @@ var clean = function (paths) {
   });
 };
 
-var indexHtml = function () {
-  return new Promise(function (fulfil) {
-    $.util.log('Rebuilding index.html');
-    gulp.src('./src/index.html')
-      .pipe(cachebust.references())
-      .pipe(gulp.dest('./dist'))
-      .on('end', fulfil);
-    });
-};
+// var indexHtml = function () {
+//   return new Promise(function (fulfil) {
+//     $.util.log('Rebuilding index.html');
+//     gulp.src('./src/index.html')
+//       .pipe(cachebust.references())
+//       .pipe(gulp.dest('./dist'))
+//       .on('end', fulfil);
+//     });
+// };
 
 var startServer = function(){
   return new Promise(function (fulfil) {
     $.util.log('server 9000');
-    gulp.src('./dist')
+    gulp.src('.')
       .pipe($.webserver({
         port: 9000,
         livereload: true,
@@ -55,7 +55,7 @@ var watchFiles = function() {
 gulp.task('default',
   function() {
     clean(['dist'])
-    .then(indexHtml)
+    // .then(indexHtml)
     .then(build)
     .then(startServer)
     .then(watchFiles);

@@ -1,0 +1,12 @@
+<!doctype html>
+	<script src="jspm_packages/system.js"></script>
+	<script src="config.js"></script>
+	<script>
+	  System.import('lib/person')
+	  .then(function(Person) {
+	  	//console.log(Person);
+	  	console.log(new Person().age);
+	  })
+	  .catch(console.error.bind(console));
+	</script>
+</html>
