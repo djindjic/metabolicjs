@@ -1,8 +1,15 @@
-var gulp    = require('gulp'),
-    Promise = require('promise'),   
-    del     = require('del'),
-    $       = require('gulp-load-plugins')();
-    to5     = require('gulp-6to5');
+var gulp      = require('gulp'),
+    Promise   = require('promise'),   
+    del       = require('del'),
+    $         = require('gulp-load-plugins')(),
+    cachebust = new $.cachebust
+
+var build = function (paths) {
+  return new Promise(function (fulfil) {
+    $.util.log('Building to dist');
+    fulfil();
+  });
+};
 
 var clean = function (paths) {
   return new Promise(function (fulfil) {
@@ -14,32 +21,43 @@ var clean = function (paths) {
   });
 };
 
-var sixto5 = function () {
+var indexHtml = function () {
   return new Promise(function (fulfil) {
-    $.util.log('-to5');
-    gulp.src('src/**/*.js')
-      .pipe(to5({ modules: "amd" }))
-      //.pipe($.concat('all.js'))
-      .pipe(gulp.dest('dist-to5'));
+    $.util.log('Rebuilding index.html');
+    gulp.src('./src/index.html')
+      .pipe(cachebust.references())
+      .pipe(gulp.dest('./dist'))
+      .on('end', fulfil);
+    });
+};
+
+var startServer = function(){
+  return new Promise(function (fulfil) {
+    $.util.log('server 9000');
+    gulp.src('./dist')
+      .pipe($.webserver({
+        port: 9000,
+        livereload: true,
+        fallback: 'index.html'
+      }))
+      .on('end', fulfil);
+    });
+};
+
+var watchFiles = function() {
+  $.util.log('Watching files');
+  $.watch(['src/**/*.js'], function() {
+    clean(['dist'])
+    .then(build);
   });
 };
 
-// var traceur = function () {
-//  return new Promise(function (fulfil) {
-//      $.util.log('-traceur');
-//      gulp.src('src/**/*.js')
-//          .pipe($.sourcemaps.init())
-//          .pipe($.traceur())
-//          .pipe($.concat('all.js'))
-//          .pipe($.sourcemaps.write())
-//          .pipe(gulp.dest('dist-traceur'));
-//  });
-// };
-
 gulp.task('default',
   function() {
-    clean(['dist-to5', 'dist-traceur'])
-    .then(sixto5);
-    //.then(traceur);
+    clean(['dist'])
+    .then(indexHtml)
+    .then(build)
+    .then(startServer)
+    .then(watchFiles);
   }
 );
