@@ -2,10 +2,9 @@
 	<script src="jspm_packages/system.js"></script>
 	<script src="config.js"></script>
 	<script>
-	  System.import('lib/person')
-	  .then(function(Person) {
-	  	//console.log(Person);
-	  	console.log(new Person().age);
+	  System.import('lib/metabolic')
+	  .then(function(metabolic) {
+	  	console.log(new metabolic.Person().age);
 	  })
 	  .catch(console.error.bind(console));
 	</script>
