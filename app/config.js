@@ -1,7 +1,7 @@
 System.config({
   "paths": {
     "*": "*.js",
-    "metabolicjs/*": "lib/*.js"
+    "github:*": "jspm_packages/github/*.js"
   }
 });
 
