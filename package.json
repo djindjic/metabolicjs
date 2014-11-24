@@ -8,7 +8,7 @@
     "name": "metabolicjs",
     "directories": {
       "baseURL": "app",
-      "lib": "app/src"
+      "lib": "app/lib"
     }
   }
 }
