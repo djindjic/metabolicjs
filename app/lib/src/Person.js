@@ -1,6 +1,4 @@
-export default
-
-class Person {
+export class Person {
   constructor() {
   	this.age = 34;
   }
