@@ -1,22 +1,7 @@
-var gulp           = require('gulp'),
-    $              = require('gulp-load-plugins')();
-
-var startServer = function(){
-  gulp.src('./app')
-    .pipe($.webserver({
-      port: 9000,
-      livereload: true,
-      fallback: 'index.html',
-      proxies: [
-        {
-          source: '/api', target: 'http://localhost:3000/'
-        }
-      ]
-    }))
-};
-
-gulp.task('default',
-  function() {
-    startServer();
-  }
-);
+var gulp  = require('gulp'),
+    shell = require('gulp-shell'),
+    watch = require('gulp-watch');
+ 
+gulp.task('default', function(cb) {
+  watch(['lib/**/*'], shell.task(['']));
+});
