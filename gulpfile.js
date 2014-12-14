@@ -3,5 +3,5 @@ var gulp  = require('gulp'),
     watch = require('gulp-watch');
  
 gulp.task('default', function(cb) {
-  watch(['lib/**/*'], shell.task(['']));
+  watch(['lib/**/*'], shell.task(['jspm link github:djindjic/metabolicjs@0.0.1 -y']));
 });
