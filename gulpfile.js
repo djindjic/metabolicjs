@@ -1,16 +1,25 @@
-var gulp    = require('gulp'),
-    shell   = require('gulp-shell'),
-    watch   = require('gulp-watch'),
-    bump    = require('gulp-bump'),
-    version = require('./package.json').version;
+var gulp        = require('gulp'),
+    semver      = require('semver'),
+    shell       = require('gulp-shell'),
+    watch       = require('gulp-watch'),
+    bump        = require('gulp-bump'),
+    pkg         = require('./package.json');
 
-
-gulp.task('bump-version', function(){
+gulp.task('deploy', function(){
+  var newVer = semver.inc(pkg.version, 'patch');
   return gulp.src(['./package.json'])
-    .pipe(bump({type:'patch'})) //major|minor|patch|prerelease
-    .pipe(gulp.dest('./'));
+    .pipe(bump({version: newVer}))
+    .pipe(gulp.dest('./'))
+    .on('end', shell.task([
+            'git add --all',
+            'git commit -m "' + newVer + '"', 
+            'git tag -a "' + newVer + '" -m "' + newVer + '"',
+            'git push origin master', 
+            'git push origin --tags'
+           ]));
+
 });
 
 gulp.task('default', function(cb) {
-  watch(['lib/**/*'], shell.task(['jspm link github:djindjic/metabolicjs@' + version + ' -y']));
+  watch(['lib/**/*'], shell.task(['jspm link github:djindjic/metabolicjs@' + pkg.version + ' -y']));
 });

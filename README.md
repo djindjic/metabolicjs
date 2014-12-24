@@ -1,5 +1,3 @@
 metabolicjs
 ===========
-ec6
-SystemJS
-jspm
+es6 lib for jspm
