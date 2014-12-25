@@ -5,7 +5,7 @@
   "jspm": {
     "dependencies": {
       "aurelia-dependency-injection": "^0.1.1",
-      "decimal.js": "^4.0.1"
+      "decimal.js": "github:MikeMcl/decimal.js@^4.0.1"
     }
   },
   "devDependencies": {
