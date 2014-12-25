@@ -20,5 +20,8 @@
     "karma-jasmine": "^0.3.3",
     "karma-jspm": "^1.1.1",
     "semver": "^4.2.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   }
 }
