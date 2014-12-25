@@ -24,6 +24,6 @@
     "semver": "^4.2.0"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS"
+    "test": "./node_modules/karma/bin/karma start --browsers Firefox --single-run"
   }
 }
