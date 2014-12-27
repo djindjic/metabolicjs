@@ -18,11 +18,11 @@ describe('Person', function(){
     expect(this.person.weight).toBe(81);
   });
 
-  it('calculate bmi', function(){
-    expect(this.person.bmi).toBe(27.38);
+  it('calculate body mass index', function(){
+    expect(this.person.body_mass_index).toBe(27.38);
   });
 
-  it('calculate bf', function(){
-    expect(this.person.bf).toBe(24.48);
+  it('calculate average body fat', function(){
+    expect(this.person.average_body_fat).toBe(24.48);
   });
 });

@@ -1,18 +1,18 @@
 import di from 'aurelia-dependency-injection';
 import {
-  Carb
-  // Sucrose,
-  // Lactose,
-  // Maltose,
-  // Strach,
-  // Glycogen,
-  // Fibre
+  Carb,
+  Sucrose,
+  Lactose,
+  Maltose,
+  Strach,
+  Glycogen,
+  Fibre
 } from 'lib/metabolic';
 
 describe('Carb', function(){
   beforeEach(function() {
-    let container = new di.Container();
-    this.carb = container.get(Carb);
+    this.container = new di.Container();
+    this.carb = this.container.get(Carb);
   });
   it('calculate amount of fructose and glucose by entered sucrose', function(){
     this.carb.sucrose = 20;
@@ -35,5 +35,10 @@ describe('Carb', function(){
   it('calculate amount of glucose by entered glycogen', function(){
     this.carb.glycogen = 20;
     expect(this.carb.glucose).toBe(20);
+  });
+  it('sucrose amount getter and setter', function(){
+    let sucrose = this.container.get(Sucrose);
+    sucrose.amount = 20;
+    expect(sucrose.amount).toBe(20);
   });
 });
