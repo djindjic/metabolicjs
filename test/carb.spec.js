@@ -51,4 +51,13 @@ describe('Carb', function(){
     expect(this.carb.glucose_total).toBe(90);
     expect(this.carb.galactose_total).toBe(20);
   });
+  it('injected dependencies is not a singletons', function(){
+    let newContainer1 = new di.Container();
+    let newContainer2 = new di.Container();
+    let firstCarb = newContainer1.get(Carb);
+    let secondCarb = newContainer2.get(Carb);
+    secondCarb.monosaccharides.glucose = 20;
+    console.log(firstCarb.monosaccharides);
+    expect(firstCarb.monosaccharides).not.toBe(secondCarb.monosaccharides);
+  });
 });
