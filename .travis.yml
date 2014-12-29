@@ -7,6 +7,14 @@ node_js:
 # https://github.com/travis-ci/travis-ci/issues/272#issuecomment-14402117
 # http://stackoverflow.com/questions/19255976/how-to-make-travis-execute-angular-tests-on-chrome-please-set-env-variable-chr
 #
+env:
+  global:
+    - secure: XM2ED3Nf+lGfkECnbYL5x6fW6TqIG6Dp2HW1DqcvZybdwtfKlaIQSWdqWS/yndHgYGx2KuYIHuRjQrN89tt7uQwgEKUtLZXitFTtRml+XUaAVXAGsnvQSdrbFryCCFL6oamcERRNvGs0PCfLbrG1uBnSJHe5OeZSnIY7XYl9tEc=
+    - secure: bvczU90wLSwwaCiHL5Kl5m3UjnsT0NItNXTpihQmcJ3jPy3fZTSBHq1xkyEXsk2er6GXktCUNptvf8htWwKOlOBdx4m6mSA1qqFEtJwzWQG0jrUWtRj9i7A23aMH7tstAX3MDEktanqmcl40rpfqQ9xRbudFiHW7BBmefMP16f8=
+
+addons:
+  sauce_connect: true
+
 before_install:
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
