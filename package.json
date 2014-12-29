@@ -23,11 +23,22 @@
     "karma-mocha": "^0.1.10",
     "karma-mocha-reporter": "^0.2.2",
     "karma-sinon": "^1.0.4",
+    "karma-tap": "^1.0.1",
+    "karma-tap-reporter": "0.0.3",
     "mocha": "^2.1.0",
     "semver": "^4.2.0",
     "sinon": "^1.12.2"
   },
+  "testling": {
+    "harness": "mocha-tdd",
+    "files": "test/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "chrome/latest",
+      "firefox/latest"
+    ]
+  },
   "scripts": {
-    "test": "mocha --ui tdd"
+    "test": "node_modules/karma/bin/karma start karma.conf.js --single-run"
   }
 }
