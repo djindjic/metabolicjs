@@ -14,28 +14,28 @@ describe('Polysaccharides', function(){
     it('strach', function(){
       let strach = this.container.get(Strach);
       strach.amount = 20;
-      expect(strach.amount).toBe(20);
+      expect(strach.amount).to.equal(20);
     });
     it('glycogen', function(){
       let glycogen = this.container.get(Glycogen);
       glycogen.amount = 20;
-      expect(glycogen.amount).toBe(20);
+      expect(glycogen.amount).to.equal(20);
     });
   });
   describe('Amounts to monosaccharides', function(){
     it('strach', function(){
       let strach = this.container.get(Strach);
       strach.amount = 20;
-      expect(strach.fructose).toBe(0);
-      expect(strach.glucose).toBe(20);
-      expect(strach.galactose).toBe(0);
+      expect(strach.fructose).to.equal(0);
+      expect(strach.glucose).to.equal(20);
+      expect(strach.galactose).to.equal(0);
     });
     it('glycogen', function(){
       let glycogen = this.container.get(Glycogen);
       glycogen.amount = 20;
-      expect(glycogen.fructose).toBe(0);
-      expect(glycogen.glucose).toBe(20);
-      expect(glycogen.galactose).toBe(0);
+      expect(glycogen.fructose).to.equal(0);
+      expect(glycogen.glucose).to.equal(20);
+      expect(glycogen.galactose).to.equal(0);
     });
   });
   describe('Polysaccharides object', function(){
@@ -45,25 +45,25 @@ describe('Polysaccharides', function(){
     describe('Amount getter and setter', function(){
       it('strach', function(){
         this.polysaccharides.strach = 20;
-        expect(this.polysaccharides.strach).toBe(20);
+        expect(this.polysaccharides.strach).to.equal(20);
       });
       it('glycogen', function(){
         this.polysaccharides.glycogen = 20;
-        expect(this.polysaccharides.glycogen).toBe(20);
+        expect(this.polysaccharides.glycogen).to.equal(20);
       });
     });
     describe('Amounts to monosaccharides', function(){
       it('strach', function(){
         this.polysaccharides.strach = 20;
-        expect(this.polysaccharides.fructose_total).toBe(0);
-        expect(this.polysaccharides.glucose_total).toBe(20);
-        expect(this.polysaccharides.galactose_total).toBe(0);
+        expect(this.polysaccharides.fructose_total).to.equal(0);
+        expect(this.polysaccharides.glucose_total).to.equal(20);
+        expect(this.polysaccharides.galactose_total).to.equal(0);
       });
       it('glycogen', function(){
         this.polysaccharides.glycogen = 20;
-        expect(this.polysaccharides.fructose_total).toBe(0);
-        expect(this.polysaccharides.glucose_total).toBe(20);
-        expect(this.polysaccharides.galactose_total).toBe(0);
+        expect(this.polysaccharides.fructose_total).to.equal(0);
+        expect(this.polysaccharides.glucose_total).to.equal(20);
+        expect(this.polysaccharides.galactose_total).to.equal(0);
       });
     });
   });

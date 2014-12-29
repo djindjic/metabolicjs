@@ -12,17 +12,17 @@ describe('Person', function(){
     this.person.weight = 81;
   });
   it('set and get properties', function(){
-    expect(this.person.age).toBe(34);
-    expect(this.person.gender).toBe('male');
-    expect(this.person.height).toBe(172);
-    expect(this.person.weight).toBe(81);
+    expect(this.person.age).to.equal(34);
+    expect(this.person.gender).to.equal('male');
+    expect(this.person.height).to.equal(172);
+    expect(this.person.weight).to.equal(81);
   });
 
   it('calculate body mass index', function(){
-    expect(this.person.body_mass_index).toBe(27.38);
+    expect(this.person.body_mass_index).to.equal(27.38);
   });
 
   it('calculate average body fat', function(){
-    expect(this.person.average_body_fat).toBe(24.48);
+    expect(this.person.average_body_fat).to.equal(24.48);
   });
 });
