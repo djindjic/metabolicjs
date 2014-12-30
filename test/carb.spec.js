@@ -15,42 +15,56 @@ describe('Carb', function(){
       expect(this.carb.fructose_total).to.equal(10);
       expect(this.carb.glucose_total).to.equal(10);
       expect(this.carb.galactose_total).to.equal(0);
-      expect(this.carb.fibre_total).to.equal(0);
+      expect(this.carb.fibre_insoluble_total).to.equal(0);
+      expect(this.carb.fibre_soluble_total).to.equal(0);
     });
     it('by entered lactose', function(){
       this.carb.disaccharides.lactose = 20;
       expect(this.carb.galactose_total).to.equal(10);
       expect(this.carb.glucose_total).to.equal(10);
       expect(this.carb.fructose_total).to.equal(0);
-      expect(this.carb.fibre_total).to.equal(0);
+      expect(this.carb.fibre_insoluble_total).to.equal(0);
+      expect(this.carb.fibre_soluble_total).to.equal(0);
     });
     it('by entered maltose', function(){
       this.carb.disaccharides.maltose = 20;
       expect(this.carb.glucose_total).to.equal(20);
       expect(this.carb.fructose_total).to.equal(0);
       expect(this.carb.galactose_total).to.equal(0);
-      expect(this.carb.fibre_total).to.equal(0);
+      expect(this.carb.fibre_insoluble_total).to.equal(0);
+      expect(this.carb.fibre_soluble_total).to.equal(0);
     });
     it('by entered strach', function(){
       this.carb.polysaccharides.strach = 20;
       expect(this.carb.glucose_total).to.equal(20);
       expect(this.carb.fructose_total).to.equal(0);
       expect(this.carb.galactose_total).to.equal(0);
-      expect(this.carb.fibre_total).to.equal(0);
+      expect(this.carb.fibre_insoluble_total).to.equal(0);
+      expect(this.carb.fibre_soluble_total).to.equal(0);
     });
     it('by entered glycogen', function(){
       this.carb.polysaccharides.glycogen = 20;
       expect(this.carb.glucose_total).to.equal(20);
       expect(this.carb.fructose_total).to.equal(0);
       expect(this.carb.galactose_total).to.equal(0);
-      expect(this.carb.fibre_total).to.equal(0);
+      expect(this.carb.fibre_insoluble_total).to.equal(0);
+      expect(this.carb.fibre_soluble_total).to.equal(0);
     });
-    it('by entered fibre', function(){
-      this.carb.polysaccharides.fibre = 20;
+    it('by entered fibre insoluble', function(){
+      this.carb.polysaccharides.fibre.insoluble = 20;
       expect(this.carb.glucose_total).to.equal(0);
       expect(this.carb.fructose_total).to.equal(0);
       expect(this.carb.galactose_total).to.equal(0);
-      expect(this.carb.fibre_total).to.equal(20);
+      expect(this.carb.fibre_insoluble_total).to.equal(20);
+      expect(this.carb.fibre_soluble_total).to.equal(0);
+    });
+    it('by entered fibre soluble', function(){
+      this.carb.polysaccharides.fibre.soluble = 20;
+      expect(this.carb.glucose_total).to.equal(0);
+      expect(this.carb.fructose_total).to.equal(0);
+      expect(this.carb.galactose_total).to.equal(0);
+      expect(this.carb.fibre_insoluble_total).to.equal(0);
+      expect(this.carb.fibre_soluble_total).to.equal(20);
     });
     it('by entered sucrose, lactose, maltose, strach, glycogen and fibre', function(){
       this.carb.monosaccharides.glucose = 10;
@@ -61,11 +75,13 @@ describe('Carb', function(){
       this.carb.disaccharides.maltose = 20;
       this.carb.polysaccharides.strach = 20;
       this.carb.polysaccharides.glycogen = 20;
-      this.carb.polysaccharides.fibre = 30;
+      this.carb.polysaccharides.fibre.soluble = 40;
+      this.carb.polysaccharides.fibre.insoluble = 50;
       expect(this.carb.fructose_total).to.equal(20);
       expect(this.carb.glucose_total).to.equal(90);
       expect(this.carb.galactose_total).to.equal(20);
-      expect(this.carb.fibre_total).to.equal(30);
+      expect(this.carb.fibre_insoluble_total).to.equal(50);
+      expect(this.carb.fibre_soluble_total).to.equal(40);
     });
   });
   it('injected dependencies is not a singletons', function(){

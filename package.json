@@ -23,7 +23,6 @@
     "karma-mocha": "^0.1.10",
     "karma-mocha-reporter": "^0.2.2",
     "karma-sinon": "^1.0.4",
-    "karma-tap": "^1.0.1",
     "mocha": "^2.1.0",
     "semver": "^4.2.0",
     "sinon": "^1.12.2"
