@@ -59,15 +59,15 @@ describe('Polysaccharides', function(){
         this.polysaccharides.strach = 20;
         expect(this.polysaccharides.strach).to.equal(20);
         expect(this.polysaccharides.glycogen).to.equal(0);
-        expect(this.polysaccharides.fibre_insoluble_total).to.equal(0);
-        expect(this.polysaccharides.fibre_soluble_total).to.equal(0);
+        expect(this.polysaccharides.fibre_insoluble).to.equal(0);
+        expect(this.polysaccharides.fibre_soluble).to.equal(0);
       });
       it('glycogen', function(){
         this.polysaccharides.glycogen = 20;
         expect(this.polysaccharides.glycogen).to.equal(20);
         expect(this.polysaccharides.strach).to.equal(0);
-        expect(this.polysaccharides.fibre_insoluble_total).to.equal(0);
-        expect(this.polysaccharides.fibre_soluble_total).to.equal(0);
+        expect(this.polysaccharides.fibre_insoluble).to.equal(0);
+        expect(this.polysaccharides.fibre_soluble).to.equal(0);
       });
     });
     describe('Amounts to monosaccharides', function(){
@@ -76,31 +76,31 @@ describe('Polysaccharides', function(){
         expect(this.polysaccharides.fructose_total).to.equal(0);
         expect(this.polysaccharides.glucose_total).to.equal(20);
         expect(this.polysaccharides.galactose_total).to.equal(0);
-        expect(this.polysaccharides.fibre_insoluble_total).to.equal(0);
-        expect(this.polysaccharides.fibre_soluble_total).to.equal(0);
+        expect(this.polysaccharides.fibre_insoluble).to.equal(0);
+        expect(this.polysaccharides.fibre_soluble).to.equal(0);
       });
       it('glycogen', function(){
         this.polysaccharides.glycogen = 20;
         expect(this.polysaccharides.fructose_total).to.equal(0);
         expect(this.polysaccharides.glucose_total).to.equal(20);
         expect(this.polysaccharides.galactose_total).to.equal(0);
-        expect(this.polysaccharides.fibre_insoluble_total).to.equal(0);
-        expect(this.polysaccharides.fibre_soluble_total).to.equal(0);
+        expect(this.polysaccharides.fibre_insoluble).to.equal(0);
+        expect(this.polysaccharides.fibre_soluble).to.equal(0);
       });
     });
     describe('Fibre amounts', function(){
       it('insoluble', function(){
-        this.polysaccharides.fibre.insoluble = 20;
-        expect(this.polysaccharides.fibre_insoluble_total).to.equal(20);
-        expect(this.polysaccharides.fibre_soluble_total).to.equal(0);
+        this.polysaccharides.fibre_insoluble = 20;
+        expect(this.polysaccharides.fibre_insoluble).to.equal(20);
+        expect(this.polysaccharides.fibre_soluble).to.equal(0);
         expect(this.polysaccharides.fructose_total).to.equal(0);
         expect(this.polysaccharides.glucose_total).to.equal(0);
         expect(this.polysaccharides.galactose_total).to.equal(0);
       });
       it('soluble', function(){
-        this.polysaccharides.fibre.soluble = 20;
-        expect(this.polysaccharides.fibre_insoluble_total).to.equal(0);
-        expect(this.polysaccharides.fibre_soluble_total).to.equal(20);
+        this.polysaccharides.fibre_soluble = 20;
+        expect(this.polysaccharides.fibre_insoluble).to.equal(0);
+        expect(this.polysaccharides.fibre_soluble).to.equal(20);
         expect(this.polysaccharides.fructose_total).to.equal(0);
         expect(this.polysaccharides.glucose_total).to.equal(0);
         expect(this.polysaccharides.galactose_total).to.equal(0);
