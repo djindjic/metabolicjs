@@ -1,11 +1,12 @@
 {
   "registry": "jspm",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "lib/metabolic",
   "jspm": {
     "dependencies": {
       "aurelia-dependency-injection": "^0.1.1",
-      "decimal.js": "github:MikeMcl/decimal.js@^4.0.1"
+      "decimal.js": "github:MikeMcl/decimal.js@^4.0.1",
+      "forwardablejs": "github:djindjic/forwardablejs@^0.1.10"
     }
   },
   "devDependencies": {
