@@ -5,7 +5,7 @@ var gulp        = require('gulp'),
     bump        = require('gulp-bump'),
     pkg         = require('./package.json');
 
-gulp.task('deploy', function(){
+gulp.task('deploy-master', function(){
   var newVer = semver.inc(pkg.version, 'patch');
   return gulp.src(['./package.json'])
     .pipe(bump({version: newVer}))
