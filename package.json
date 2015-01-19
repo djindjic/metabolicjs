@@ -6,8 +6,11 @@
     "dependencies": {
       "aurelia-dependency-injection": "^0.1.1",
       "decimal.js": "github:MikeMcl/decimal.js@^4.0.1",
-      "forwardablejs": "github:djindjic/forwardablejs@^0.1.10"
-    }
+      "forwardablejs": "npm:forwardablejs@^0.1.44"
+    },
+    "jspm": {
+      "format": "es6"
+    },
   },
   "devDependencies": {
     "chai": "^1.10.0",
@@ -19,10 +22,10 @@
     "karma": "^0.12.28",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.7",
-    "karma-firefox-launcher": "^0.1.3",
     "karma-jspm": "^1.1.1",
     "karma-mocha": "^0.1.10",
     "karma-mocha-reporter": "^0.2.2",
+    "karma-sauce-launcher": "^0.2.10",
     "karma-sinon": "^1.0.4",
     "mocha": "^2.1.0",
     "semver": "^4.2.0",
