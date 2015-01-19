@@ -84,7 +84,7 @@ describe('Carb', function(){
       expect(this.carb.fibre_soluble).to.equal(40);
     });
   });
-  it('injected dependencies is not a singletons', function(){
+  it('injected dependencies are not a singletons', function(){
     let containerTest = new di.Container();
     containerTest.registerTransient(Carb, Carb);
     let firstCarb = containerTest.get(Carb);
