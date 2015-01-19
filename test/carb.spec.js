@@ -89,6 +89,7 @@ describe('Carb', function(){
     containerTest.registerTransient(Carb, Carb);
     let firstCarb = containerTest.get(Carb);
     let secondCarb = containerTest.get(Carb);
+    firstCarb.free_glucose = 10
     secondCarb.free_glucose = 20;
     expect(firstCarb.free_glucose).not.equal(secondCarb.free_glucose);
   });
