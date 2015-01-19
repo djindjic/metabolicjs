@@ -1,6 +1,6 @@
 {
   "registry": "jspm",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "lib/metabolic",
   "jspm": {
     "dependencies": {
@@ -8,9 +8,7 @@
       "decimal.js": "github:MikeMcl/decimal.js@^4.0.1",
       "forwardablejs": "npm:forwardablejs@^0.1.44"
     },
-    "jspm": {
-      "format": "es6"
-    },
+    "format": "es6"
   },
   "devDependencies": {
     "chai": "^1.10.0",
