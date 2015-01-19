@@ -85,8 +85,10 @@ describe('Carb', function(){
     });
   });
   it('injected dependencies is not a singletons', function(){
-    let firstCarb = this.container.get(Carb);
-    let secondCarb = this.container.get(Carb);
+    let containerTest = new di.Container();
+    containerTest.registerTransient(Carb, Carb);
+    let firstCarb = containerTest.get(Carb);
+    let secondCarb = containerTest.get(Carb);
     secondCarb.free_glucose = 20;
     expect(firstCarb.free_glucose).not.equal(secondCarb.free_glucose);
   });
