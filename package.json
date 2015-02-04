@@ -1,6 +1,7 @@
 {
   "registry": "jspm",
-  "version": "0.1.16",
+  "version": "0.1.17",
+  "name": "metabolicjs",
   "main": "lib/metabolic",
   "jspm": {
     "dependencies": {
