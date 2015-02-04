@@ -1,9 +1,9 @@
-import di from 'aurelia-dependency-injection';
+import {Container} from 'aurelia-dependency-injection';
 import {Person} from 'lib/metabolic';
 
 describe('Person', function(){
   beforeEach(function() {
-    let container = new di.Container();
+    let container = new Container();
     this.person = container.get(Person);
 
     this.person.age = 34;

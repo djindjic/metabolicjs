@@ -1,15 +1,15 @@
 {
   "registry": "jspm",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "name": "metabolicjs",
   "main": "lib/metabolic",
   "jspm": {
+    "format": "es6",
     "dependencies": {
-      "aurelia-dependency-injection": "^0.1.1",
+      "aurelia-dependency-injection": "^0.4.0",
       "decimal.js": "github:MikeMcl/decimal.js@^4.0.1",
       "forwardablejs": "npm:forwardablejs@^0.1.44"
-    },
-    "format": "es6"
+    }
   },
   "devDependencies": {
     "chai": "^1.10.0",
@@ -17,7 +17,7 @@
     "gulp-bump": "^0.1.11",
     "gulp-shell": "^0.2.11",
     "gulp-watch": "^3.0.0",
-    "jspm": "^0.10.0",
+    "jspm": "^0.11.0",
     "karma": "^0.12.28",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.7",

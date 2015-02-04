@@ -1,4 +1,4 @@
-import di from 'aurelia-dependency-injection';
+import {Container} from 'aurelia-dependency-injection';
 import {
   Polysaccharides,
   Strach,
@@ -8,7 +8,7 @@ import {
 
 describe('Polysaccharides', function(){
   beforeEach(function() {
-    this.container = new di.Container();
+    this.container = new Container();
   });
   describe('Amount getters ad setters', function(){
     it('strach', function(){

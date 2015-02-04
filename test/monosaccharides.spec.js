@@ -1,11 +1,11 @@
-import di from 'aurelia-dependency-injection';
+import {Container} from 'aurelia-dependency-injection';
 import {
   Monosaccharides
 } from 'lib/metabolic';
 
 describe('Monosaccharides', function(){
   beforeEach(function() {
-    this.container = new di.Container();
+    this.container = new Container();
   });
   describe('Monosaccharides object', function(){
     beforeEach(function() {
