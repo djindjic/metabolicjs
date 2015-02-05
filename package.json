@@ -1,6 +1,6 @@
 {
   "registry": "jspm",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "name": "metabolicjs",
   "main": "lib/metabolic",
   "jspm": {
