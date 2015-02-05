@@ -84,9 +84,8 @@ describe('Carb', function(){
       expect(this.carb.fibre_soluble).to.equal(40);
     });
   });
-  it.skip('injected dependencies are not a singletons', function(){
+  it('injected dependencies are not a singletons', function(){
     let containerTest = new Container();
-    containerTest.registerTransient(Carb, Carb);
     let firstCarb = containerTest.get(Carb);
     let secondCarb = containerTest.get(Carb);
     firstCarb.free_glucose = 10
