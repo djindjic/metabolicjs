@@ -21,5 +21,5 @@ gulp.task('deploy-master', function(){
 });
 
 gulp.task('link', function(cb) {
-  watch(['lib/**/*'], shell.task(['jspm link github:djindjic/metabolicjs@' + pkg.version + ' -y']));
+  watch(['lib/**/*'], shell.task(['jspm link github:djindjic/metabolicjs@dev -y']));
 });
