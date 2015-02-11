@@ -9,3 +9,7 @@ ES6 lib for jspm
   <img alt="Code Climate Score" src="http://img.shields.io/codeclimate/github/djindjic/metabolicjs.svg?style=flat">
 </a>
 </p>
+```bach
+npm install -g jspm
+npm install -g karma
+```

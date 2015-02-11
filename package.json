@@ -1,6 +1,6 @@
 {
   "registry": "jspm",
-  "version": "0.1.30",
+  "version": "0.1.31",
   "name": "metabolicjs",
   "main": "lib/metabolic",
   "repository": "http://github.com/djindjic/metabolicjs",
@@ -18,8 +18,6 @@
     "gulp-bump": "^0.1.11",
     "gulp-shell": "^0.2.11",
     "gulp-watch": "^3.0.0",
-    "jspm": "^0.11.0",
-    "karma": "^0.12.28",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.7",
     "karma-jspm": "^1.1.1",
@@ -30,8 +28,5 @@
     "mocha": "^2.1.0",
     "semver": "^4.2.0",
     "sinon": "^1.12.2"
-  },
-  "scripts": {
-    "test": "node_modules/karma/bin/karma start karma.conf.js --single-run"
   }
 }
