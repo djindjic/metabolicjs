@@ -1,6 +1,6 @@
 {
   "registry": "jspm",
-  "version": "0.1.28",
+  "version": "0.1.29",
   "name": "metabolicjs",
   "main": "lib/metabolic",
   "repository": "http://github.com/djindjic/metabolicjs",
