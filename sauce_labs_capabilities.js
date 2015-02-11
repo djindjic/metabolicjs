@@ -1,4 +1,4 @@
-var browsers = {
+module.exports.capabilities = {
   sl_firefox: {
     base: 'SauceLabs',
     browserName: 'firefox',
